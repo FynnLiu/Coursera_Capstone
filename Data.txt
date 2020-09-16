@@ -1,0 +1,101 @@
+
+# The data.csv file is the target data I am going to processing. The data is from Seattle Police Department
+# It includes all types of collisions.
+# 'OBJECTID' is the Object ID, it is the ESRI unique identifier.
+# 'SHAPE' is the geometry, it is the ESRI geometry field.
+# 'INCKEY' is the unique key for the incident.
+# 'COLDETKEY' is the secondary key for the incident.
+# 'ADDRTYPE' is the collision address, there are three types: alley, block and intersection.
+# 'INTKEY' is the key that corresponds to the intersection associated with a collision.
+# 'LOCATION' is the description of the general location of the collision.
+# 'SEVERITYCODE' is the code that corresponds to the severity of the collision, '3' indicates fatality, '2b'
+#   stands for serious injury, '2' is injury, '1' is prop damage, '0' is unknown.
+# 'SEVERITYDESC' is the detailed description of the severity of the collision.
+# 'COLLISIONTYPE' is the collision type.
+# 'PERSONCOUNT' is the total number of people involved in the collision.
+# 'PEDCOUNT' is the number of pedestrians involved in the collision.
+# 'PEDCYLCOUNT' is the number of bicycles involved in the collision.
+# 'VEHCOUNT' is the number of vehicles involved in the collision.
+# 'INJURIES' is the number of total injures in the collision.
+# 'SERIOUSINJURIES' is the number of serious injures in the collision.
+# 'FATALITIES' is the number of fatalities in the collision.
+# 'INDATE' is the date of the incident.
+# 'INCDTTM' is the data and time of the incident.
+# 'JUNCTIONTYPE' is the category of junction at which collision took place.
+# 'SDOT_COLCODE' is the code given to the collision by SDOT.
+# 'SDOT_COLDESC' is the description of the collision corresponding to the collision code.
+# 'INATTENTIONIND' is the code for whether or not collision was due to inattention.
+# 'UNDERINFL' is whether if the driver involved was under the influence of drugs and alcohol.
+# 'WEATHER' is the description of the weather conditions during the time of the collision.
+# 'ROADCOND' is the condition of the road during the collision.
+# 'LIGHTCOND' is the light conditions during the collision.
+# 'PEDROWNOTGRNT' is whether or not the pedestrian right of way was not granted.
+# 'SDOTCOLNUM' is a number given to the collision by SDOT.
+# 'SPEEDING' is whether or not speeding was a factor in the collision.
+# 'ST_COLCODE' is a code provided by the state that describes the collision.
+# 'ST_COLDESC' is a description that corresponds to the state's coding designation.
+# 'SEGLANEKEY' is a key for the lane segment in which the collision occurred.
+# 'CROSSWALKKEY' is a key for the crosswalk at which the collision occurred.
+# 'HITPARKEDCAR' is whether or not the collision involved hitting a parked car.
+# The State Collision Code Dictionary is shown as below:
+# 0 Vehicle Going Straight Hits Pedestrian.
+# 1 Vehicle Turning Right Hits Pedestrian.
+# 2 Vehicle Turning Left Hits Pedestrian.
+# 3 Vehicle Backing Hits Pedestrian.
+# 4 Vehicle Hits Pedestrian - All Other Actions.
+# 5 Vehicle Hits Pedestrian - Actions Not Stated
+# 10 Entering At Angle
+# 11 From Same Direction -Both Going Straight-Both Moving- Sideswipe.
+# 12 From Same Direction -Both Going Straight-One Stopped- Sideswipe.
+# 13 From Same Direction - Both Going Straight - Both Moving - Rear End.
+# 14 From Same Direction - Both Going Straight - One Stopped - Rear End.
+# 15 From Same Direction - One Left Turn - One Straight.
+# 16 From Same Direction - One Right Turn - One Straight.
+# 19 One Car Entering Parked Position.
+# 20 One Car Leaving Parked Position.
+# 21 One Car Entering Driveway Access.
+# 22 One Car Leaving Driveway Access.
+# 23 From Same Direction - All Others.
+# 24 From Opposite Direction - Both Moving - Head On.
+# 25 From Opposite Direction - One Stopped - Head On.
+# 26 From Opposite Direction - Both Going Straight - sideswipe.
+# 27 From Opposite Direction - Both Going Straight - One Stopped - sideswipe.
+# 28 From Opposite Direction - One Left Turn - One Straight.
+# 29 From Opposite Direction - One Left Turn - One Right Turn.
+# 30 From Opposite Direction - All Others.
+# 31 Not Stated.
+# 32 One Parked - One Moving.
+# 40 Train Struck Moving Vehicle.
+# 41 Train Struck Stopped or Stalled Vehicle.
+# 42 Vehicle Struck Moving Train.
+# 43 Vehicle Struck Stopped Train.
+# 44 Unicycle.
+# 45 Bicycle.
+# 46 Tricycle.
+# 47 Domestic Animal (horse, cow, sheep, etc).
+# 48 Domestic Animal Other (Cat, Dog etc).
+# 49 Non Domestic Animal (deer, bear, elk, etc).
+# 50 Struck Fixed Object.
+# 51 Struck Other Object.
+# 52 Vehicle Overturned.
+# 53 Person Fell, Jumped, or was Pushed From Vehicle.
+# 54 Fire Started In Vehicle.
+# 55 Accidently Overcame By Carbon Monoxide Poison.
+# 56 Breakage Of Any Part Of the Vehicle Resulting In Injury or in Further Property Damage.
+# 57 All Other Non-Collisions.
+# 60 Vehicle Hits State Road or Construction Machinery.
+# 61 Vehicle Struck By State Road or Construction Machinery.
+# 62 Vehicle Hits County Road or Construction Machinery.
+# 63 Vehicle Struck By County Road or Construction Machinery.
+# 64 Vehicle Hits City Road or Construction Machinery.
+# 65 Vehicle Struck By City Road or Construction Machinery.
+# 66 Vehicle Hits Other Road or Construction Machinery.
+# 67 Vehicle Struck by Other Road or Construction Machinery.
+# 71 Same Direction - Both Turning Right - Both Moving - Sideswipe.
+# 72 Same Direction - Both Turning Right - One Stopped - Sideswipe.
+# 73 Same Direction - Both Turning Right - Both Moving - Rear End.
+# 74 Same Direction - Both Turning Right - One Stopped - Rear End.
+# 81 Same Direction - Both Turning Left - Both Moving - Sideswipe.
+# 82 Same Direction - Both Turning Left - One Stopped - Sideswipe.
+# 83 Same Direction - Both Turning Left - Both Moving - Rear End.
+# 84 Same Direction - Both Turning Left - One Stopped - Rear End.
